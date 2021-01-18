@@ -1,0 +1,91 @@
+:root {
+    --base-font-family: 'Fira Sans', sans-serif, Helvetica;
+
+    --light-seawave-color: #7FACAC;
+    --dark-blue-color: #87CEEB;
+    --dark-grey-color: #3D3D3F;
+    --light-blue-color: lightcyan;
+    --yellow-light-color: #e7b23e;
+    --black-color: #000000;
+    --avatar-border-color: white;
+    --shadow-color: #00000029;
+    --tasklist-back-color: #98BDF4;
+    --tasklist-last-back-color: #BDD5F4;
+    --input-shadow-color: #222223;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--base-font-family);
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(40% 50%, lightcyan, pink);
+    padding: 0 calc(100vw / 24);
+}
+
+#main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 4vw, 4rem);
+    padding: 4vh 0;
+    color: var(--black-color);
+}
+
+#main-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 4vh;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 4vh;
+    column-gap: calc(8% / 3);
+}
+
+.bookarr {
+    width: 30%;
+    box-sizing: border-box;
+    border-radius: 1vw;
+    padding: 1vw 1.2vw;
+    box-shadow: 2px 2px 4px var(--shadow-color);
+    background-color: var(--tasklist-back-color);
+}
+
+.bookarr-name {
+    font-size: clamp(0.75rem, 2vw, 2rem);
+    font-weight: 600;
+    color: var(--black-color);
+    margin-bottom: 1vw;
+}
+
+.bookarr:last-child > .bookarr-name {
+    font-weight: 400;
+}
+
+.bookarr:last-child > .bookarr-name:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#add-bookarr-input {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    border-radius: 0.7vw;
+    box-shadow: 0 0 4px var(--input-shadow-color);
+    padding: 0.6vw;
+    font-size: clamp(0.7rem, 1.5vw, 1.5rem);
+    color: var(--input-shadow-color);
+    opacity: 0.7;
+    outline: none;
+}
+
+#add-bookarr-input:focus,
+#add-bookarr-input:hover {
+    opacity: 1;
+}
